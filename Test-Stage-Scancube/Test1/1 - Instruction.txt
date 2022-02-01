@@ -1,0 +1,28 @@
+﻿
+
+Dans un premier temps, vous devez créer 3 classes : Lightbox, Turntable et Camera
+Ces classes auront une méthode GetInfo. Cette méthode retournera un string.
+- Lightbox retournera "I'm a Lightbox"
+- TurnTable retournera "I'm a Turntable"
+- Camera  retournera "I'm a Camera"
+
+
+Dans la classe HardwareGenerator se trouve la méthode GetAllInfos. C'est cette méthode qui sera appelée pour valider le test.
+GetAllInfos va appeler une ou des méthodes que vous aurez implémenté pour instancier une Lighbox une Turntable et une Camera.
+Pour la suite j'appellerai cette ou ces méthode 'CreateObjet', mais vous pouvez les nommer comme vous le souhaitez.
+Ensuite elle va récupérer les infos des ces trois objets garce leur méthode GetInfo réspéctive et les retourner dans un tableau de string.
+
+Vous ne pouvez pas instancier directement vos objets via un new dans GetAllInfos. Vous devez impérativement passer par 'CreateObject' que vous aurez implémenté.
+Pour tester, dans GetAllInfos il vous faudra modifier la section 'A modifier' et décommenter la séction 'A décommenter'  
+
+Pour valider le test, lancez l'application allez sur l'onglet Test 1 et cliquer sur le bouton start.
+Si tout est bon vous devriez voir apparaître en vert à coté du nom de l'objet réspéctif :
+"I'm a Lightbox"
+"I'm a Turntable"
+"I'm a Camera"
+
+
+
+Vous êtes libre de créer autant de fichiers, de classes, d'interfaces que vous le souhaitez (en plus de celles demandées) dans le dossier Test1.
+L'appréciation de ce test ne se fera pas uniquement sur le résultat, mais sur comment vous y ête parvenue.
+Je prendrai donc en compte comment vous avez architecturé votre code ainsi que la maitrise du language C# et du .NET Framework

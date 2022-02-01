@@ -1,0 +1,31 @@
+﻿Le but de ici va être de créer des bundles comprenant une Lightbox une Turntable et une Camera et de pouvoir afficher les bundles que l'on a vendu a nos clients.
+
+Dans un premier temps, ajoutez aux classes Lightbox, Turntable, Camera : 
+
+ - Une propriété Id du type que vous souhaitez (a vous de voir quelle type est le plus judicieux). Cette Id devra être unique parmis les objet du meme type. 
+   (On ne peux pas avoir deux Lightbox avec le même Id, mais Une Lightbox et une turntable peuvent avoir le même Id)
+
+ - Une méthode GenerateId que vous devrez appeler dans le contructeur de vos classes Lightbox, Turntable, Camera.
+   Cetter methode devra initialiser la propriété ID de votre objet a sa construction.
+ 
+ Complétez la classe bundle pour quelle contienne une propriété Lightbox, une propriété Turntable et une propriété Camera
+ La classe Bundle correspond a un bunde d'objet associé a un client (la propriété Owner)
+
+ Dans la classe BundlesManager vous devrez :
+	
+	- Complétez la méthode CreateBundle, celle ci doit créer un nouveau bundle dont le client(Owner) est donné en paramètre, 
+	- Coplétez la méthode GetBundleByOwner, elle doit renvoyer le bundle associé a l'Owner donnée en paramètre
+	- Coplétez la méthode GetOwners, elle renvoie une liste de tout les clients (owners) connus.
+      Il n'y a pas besoin de faire de check en cas de doublon, on part du principe qu'un Client (owner) ne peut avoir qu'un seul bundle
+
+
+Pour valider le test, lancez l'application allez sur l'onglet Test 2 et cliquez sur le bouton GenerateBundle.
+Sur la gauche vous devriez voir apparaître la liste des clients, en cliquant sur un client, le détail de son bundle devrai apparître.
+Dans le tétail du bundle vous devriez voir le nom du client ainsi que les ID des différents objets du bundle.
+
+
+
+
+Vous êtes libre de créer autant de fichiers, de classes, d'interfaces que vous le souhaitez (en plus de celles demandées) dans le dossier Test1.
+L'appréciation de ce test ne se fera pas uniquement sur le résultat, mais sur comment vous y ête parvenue.
+Je prendrai donc en compte comment vous avez architecturé votre code ainsi que la maitrise du language C# et du .NET Framework

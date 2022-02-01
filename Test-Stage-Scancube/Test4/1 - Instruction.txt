@@ -1,0 +1,5 @@
+﻿Pushez votre travail sur votre branche.
+Pour rapelle votre branche doit avoir le nom suivant 'Prenom-Nom'
+
+Et voila vous avez fini, j'espère que le test c'est bien pour vous.
+Envoyez moi un mail a l'adresse suivante : m.lumbanzila@scancube.com pour me prévenir de votre rendu.

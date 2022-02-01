@@ -1,0 +1,12 @@
+﻿Ici nous allons crée un UI :
+
+Dans Myview.xaml, créez un bouton sur lequel est affiché "J'ai fini".
+Lorsqu'on clique dessus le bouton doit afficher dans un champ "Beaucoup trop facile ce test !"
+
+C'est tout. 
+
+Vous êtes libre d'implémenter cet UI comme vous le souhaitez, montrez moi votre maîtrise du xaml et votre style. 
+Faites-moi rêver avec un bouton et un champ de texte ;) 
+(C'est un bonus évidemment, mais cela pourrait vous démarquer des autres)
+
+Pour valider le test, lancez l'application, allez sur l'onglet Test 3, vous y verrez  ce que vous avez créé dans MyView.xaml

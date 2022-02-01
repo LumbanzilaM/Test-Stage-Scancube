@@ -3,10 +3,72 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Test_Stage_Scancube"
+        xmlns:local="clr-namespace:Test_Stage_Scancube" xmlns:test3="clr-namespace:Test_Stage_Scancube.Test3"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TabControl>
+            <TabItem Header="Test 1">
+                <StackPanel VerticalAlignment="Center">
+                    <Button Content="Start" VerticalAlignment="Center" HorizontalAlignment="Center" Click="StartTest1"/>
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="10">
+                        <TextBlock  Text="Lightbox :" Margin="10"/>
+                        <TextBlock x:Name="LightboxTxt1" MinWidth="200" Margin="10"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="10">
+                        <TextBlock  Text="Turntable :" Margin="10"/>
+                        <TextBlock x:Name="TurnTableTxt1" MinWidth="200" Margin="10"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="10">
+                        <TextBlock  Text="Camera :" Margin="10"/>
+                        <TextBlock x:Name="Cameratxt1" MinWidth="200"  Margin="10"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Test 2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="57*"/>
+                        <ColumnDefinition Width="41*"/>
+                        <ColumnDefinition Width="295*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Button x:Name="GenerateButton" Content="Generate Bundles" Click="GenerateButton_Click" Grid.ColumnSpan="2"/>
+                    <ListView Grid.Row="1" x:Name="ListViewOwner" SelectionMode="Single" Grid.ColumnSpan="2">
+
+                    </ListView>
+
+                    <Grid Grid.Row="1" Grid.Column="2">
+                        <StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="10">
+                                <TextBlock  Text="Owner:" Margin="10"/>
+                                <TextBlock x:Name="OwnerTxt2" MinWidth="200" Margin="10"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="10">
+                                <TextBlock  Text="Lightbox Id:" Margin="10"/>
+                                <TextBlock x:Name="LightboxTxt2" MinWidth="200" Margin="10"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="10">
+                                <TextBlock  Text="Turntable Id:" Margin="10"/>
+                                <TextBlock x:Name="TurnTableTxt2" MinWidth="200" Margin="10"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="10">
+                                <TextBlock  Text="Camera Id:" Margin="10"/>
+                                <TextBlock x:Name="Cameratxt2" MinWidth="200"  Margin="10"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Test 3">
+                <test3:MyView/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

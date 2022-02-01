@@ -1,0 +1,9 @@
+﻿
+Le s'organise comme suivant :
+
+Faites les Test de 0 a 4 dans l'ordre.
+Si vous avez des questions sur les instructions, des problèmes ou des remarques n'hesitez pas a me contacter via mail : m.lumbanzila@scancube.com;
+
+Avancez le plus possible, faîte attention à la properté de votre code et son architecture, ce seront des points importants.
+
+Bonne chance !

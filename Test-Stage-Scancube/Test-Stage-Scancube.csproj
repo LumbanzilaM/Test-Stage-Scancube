@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Test1\HardwareGenerator.cs" />
+    <Compile Include="Test2\Bundle.cs" />
+    <Compile Include="Test2\BundlesManager.cs" />
+    <Compile Include="Test3\MyView.xaml.cs">
+      <DependentUpon>MyView.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +73,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Test3\MyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -93,6 +103,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Test0\1 - Instruction.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Test1\1 - Instruction.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Test2\1 - Instruction.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Test3\1 - Instruction.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Test4\1 - Instruction.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="INSTRUCTION-GLOBAL.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
