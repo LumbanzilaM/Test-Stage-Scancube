@@ -20,7 +20,7 @@ Dans un premier temps, ajoutez aux classes Lightbox, Turntable, Camera :
 
 
 Pour tester allez dans le fichier MainWindow.xaml.cs (cliquez sur le triangle en face du fichier MainWindow.xaml pour le voir apparaître)
-et décommenter la séction dans la fonction ListView_Selected (a la fin du fichier)
+et décommentez la séction dans la fonction ListView_Selected (à la fin du fichier)
 
 Pour valider le test, lancez l'application allez sur l'onglet Test 2 et cliquez sur le bouton GenerateBundle.
 Sur la gauche vous devriez voir apparaître la liste des clients, en cliquant sur un client, le détail de son bundle devrai apparître.
