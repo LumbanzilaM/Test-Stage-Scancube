@@ -15,6 +15,10 @@ namespace Test_Stage_Scancube.Test2
             CreateBundles();
         }
 
+
+        public List<Bundle> Bundles { get; set; }
+
+
         public void CreateBundles()
         {
             Bundles = new List<Bundle>()
@@ -33,9 +37,11 @@ namespace Test_Stage_Scancube.Test2
         }
 
 
-        public List<Bundle> Bundles { get; set; }
-
-
+        /// <summary>
+        /// Créer un bundle qui a pour client le paramètre owner
+        /// </summary>
+        /// <param name="owner"></param>
+        /// <returns></returns>
         public Bundle CreateBundle(string owner)
         {
             // Votre code ici

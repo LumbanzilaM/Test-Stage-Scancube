@@ -19,6 +19,9 @@ Dans un premier temps, ajoutez aux classes Lightbox, Turntable, Camera :
       Il n'y a pas besoin de faire de check en cas de doublon, on part du principe qu'un Client (owner) ne peut avoir qu'un seul bundle
 
 
+Pour tester allez dans le fichier MainWindow.xaml.cs (cliquez sur le triangle en face du fichier MainWindow.xaml pour le voir apparaître)
+et décommenter la séction dans la fonction ListView_Selected (a la fin du fichier)
+
 Pour valider le test, lancez l'application allez sur l'onglet Test 2 et cliquez sur le bouton GenerateBundle.
 Sur la gauche vous devriez voir apparaître la liste des clients, en cliquant sur un client, le détail de son bundle devrai apparître.
 Dans le tétail du bundle vous devriez voir le nom du client ainsi que les ID des différents objets du bundle.

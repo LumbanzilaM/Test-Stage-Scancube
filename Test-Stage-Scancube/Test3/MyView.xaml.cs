@@ -24,10 +24,5 @@ namespace Test_Stage_Scancube.Test3
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Mytxt.Visibility = Mytxt.Visibility == Visibility.Hidden ? Visibility.Visible : Visibility.Collapsed;
-        }
     }
 }

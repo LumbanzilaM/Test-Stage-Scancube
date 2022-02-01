@@ -6,4 +6,8 @@ Si vous avez des questions sur les instructions, des problèmes ou des remarques
 
 Avancez le plus possible, faîte attention à la properté de votre code et son architecture, ce seront des points importants.
 
+
+Pour information le code de l'interface utilisateur se trouve dans MainWindow.xaml.cs.
+
+
 Bonne chance !
