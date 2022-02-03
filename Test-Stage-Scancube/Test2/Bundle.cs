@@ -9,11 +9,18 @@ namespace Test_Stage_Scancube.Test2
 {
     public class Bundle
     {
-        public Bundle()
+        private Camera camera;
+        private Lightbox Lightbox;
+        private TurnTable turnTable;
+        public Bundle( string owner, Camera camera, Lightbox Lightbox, TurnTable turnTable)
         {
+            owner = owner;
+            camera = camera;
+            Lightbox = Lightbox;
+            turnTable = turnTable;
         }
 
         public string Owner { get; set; }
-
+        
     }
 }
