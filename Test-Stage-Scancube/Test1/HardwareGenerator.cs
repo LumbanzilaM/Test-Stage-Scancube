@@ -20,23 +20,50 @@ namespace Test_Stage_Scancube.Test1
         {
             //------------------A modifier--------------------
 
-            //Lightbox lightbox = Votre méthode 'CreateObject'
-            //TurnTable turntable = Votre méthode 'CreateObject'
-            //Camera camera = Votre méthode 'CreateObject'
-
+            Lightbox lightbox = new Lightbox();
+            TurnTable turntable = new TurnTable();
+            Camera camera = new Camera();
+            
             // -----------------------------------------------
 
             //---------A décommenter (mais pas modifier)---------
 
             string[] infos = new string[]
             {
-                //lightbox.GetInfo(),
-                //turntable.GetInfo(),
-                //camera.GetInfo()
+                lightbox.GetInfo(),
+                turntable.GetInfo(),
+                camera.GetInfo()
             };
             return infos;
 
             //---------------------------------------------------
         }
+    }
+}
+class Lightbox
+{
+   public string GetInfo()
+    {
+
+        String light = "I'm a Lightbox";
+        return light;
+
+    }
+}
+class TurnTable
+{
+    public string GetInfo()
+    {
+       
+        String turn = "I'm a Turntable";
+        return turn;
+    }
+}
+class Camera
+{
+    public  string GetInfo()
+    {
+        String camera= "I'm a Camera";
+        return camera;
     }
 }
