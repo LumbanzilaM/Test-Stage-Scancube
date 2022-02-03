@@ -44,10 +44,7 @@ namespace Test_Stage_Scancube.Test2
         /// <returns></returns>
         public Bundle CreateBundle(string owner)
         {
-            // Votre code ici
-            return null;
-            //
-
+            return new Bundle(owner, new Camera(), new Lightbox(), new Turntable());
         }
 
 
@@ -59,7 +56,7 @@ namespace Test_Stage_Scancube.Test2
         public Bundle GetBundleByOwner(string owner)
         {
             // Votre code ici
-            return null;
+            return Bundles.FirstOrDefault(b => b.Owner == owner);
             //
         }
 
@@ -71,7 +68,7 @@ namespace Test_Stage_Scancube.Test2
         {
             //Votre code ici
 
-            return new List<string>();
+            return Bundles.Select(b => b.Owner).ToList();
 
             //
         }

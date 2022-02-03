@@ -21,10 +21,10 @@ namespace Test_Stage_Scancube.Test1
         {
             //------------------A modifier--------------------
 
-            Lightbox lightbox = new Lightbox();
-            TurnTable turntable = new TurnTable();
-            Camera camera = new Camera();
-            
+            Lightbox lightbox = CreateObject<Lightbox>();
+            Turntable turntable = CreateObject<Turntable>();
+            Camera camera = CreateObject<Camera>();
+
             // -----------------------------------------------
 
             //---------A décommenter (mais pas modifier)---------
@@ -41,71 +41,41 @@ namespace Test_Stage_Scancube.Test1
         }
     }
 }
-class Lightbox
-{
-    public int Id;
 
-    public int GenerateId()
+
+public abstract class Hardware
+{
+    public Guid Id { get; set; }
+
+    public Hardware()
     {
-        var IdG = (DateTime.Now.ToUniversalTime() - new DateTime(1970, 1, 1));
-        return (int)(IdG.TotalMilliseconds + 0.5);
+        this.Id = GenerateId();
     }
-    public Lightbox(int Id)
+
+    public Guid GenerateId()
     {
-        this.Id = this.GenerateId();
+        //var IdG = (DateTime.Now.ToUniversalTime() - new DateTime(1970, 1, 1));
+        //return (int)(IdG.TotalMilliseconds + 0.5);
+        return Guid.NewGuid();
     }
+
     public string GetInfo()
     {
-        String light = "I'm a Lightbox";
+        String light = $"I'm a {this.GetType().Name}";
         return light;
 
     }
+
 }
-class TurnTable
-{
-    public int Id;
-    public int GenerateId()
-    {
-        var IdG = (DateTime.Now.ToUniversalTime() - new DateTime(1970, 1, 1));
-        return (int)(IdG.TotalMilliseconds + 0.5);
-    }
-    public TurnTable()
-    {
-    }
 
-    public TurnTable(int Id)
-    {
-        this.Id = this.GenerateId();
-    }
-    public string GetInfo()
-    {
-        
-        String turn = "I'm a Turntable";
-        return turn;
-    }
+public class Lightbox : Hardware
+{
 }
-class Camera
+
+public class Turntable : Hardware
 {
-    public int Id;
+}
 
-    public Camera()
-    {
-    }
-    public int GenerateId()
-    {
-        var IdG = (DateTime.Now.ToUniversalTime() - new DateTime(1970, 1, 1));
-        return (int)(IdG.TotalMilliseconds + 0.5);
-    }
-
-    public Camera(int Id)
-    {
-        this.Id = this.GenerateId();
-
-
-    }
-    public  string GetInfo()
-    {
-        String camera= "I'm a Camera";
-        return camera;
-    }
+public class Camera : Hardware
+{
 }
