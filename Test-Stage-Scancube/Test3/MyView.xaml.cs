@@ -20,9 +20,24 @@ namespace Test_Stage_Scancube.Test3
     /// </summary>
     public partial class MyView : UserControl
     {
+        bool b = false;
         public MyView()
         {
             InitializeComponent();
+        }
+        private void progress(object sender, RoutedEventArgs e)
+        {
+            if (b)
+            {
+                output.Text = "";
+                output.Background = Brushes.Transparent;
+            }
+            else
+            {
+                output.Text = "Beaucoup trop facile ce test !";
+                output.Background = new LinearGradientBrush(Colors.LightBlue, Colors.SlateBlue, 90);
+            }
+            b = !b;
         }
     }
 }

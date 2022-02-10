@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace Test_Stage_Scancube.Test1
 {
     public class HardwareGenerator
@@ -20,9 +22,9 @@ namespace Test_Stage_Scancube.Test1
         {
             //------------------A modifier--------------------
 
-            //Lightbox lightbox = Votre méthode 'CreateObject'
-            //TurnTable turntable = Votre méthode 'CreateObject'
-            //Camera camera = Votre méthode 'CreateObject'
+            Lightbox lightbox = CreateObject<Lightbox>();
+            TurnTable turntable = CreateObject<TurnTable>();
+            Camera camera = CreateObject<Camera>();
 
             // -----------------------------------------------
 
@@ -30,9 +32,9 @@ namespace Test_Stage_Scancube.Test1
 
             string[] infos = new string[]
             {
-                //lightbox.GetInfo(),
-                //turntable.GetInfo(),
-                //camera.GetInfo()
+                lightbox.GetInfo(),
+                turntable.GetInfo(),
+                camera.GetInfo()
             };
             return infos;
 

@@ -7,5 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <Button Name="Benjamin"
+                    Height="100"
+                    Width="200"
+                    Click="progress">
+                J'ai fini
+            </Button>
+            <TextBlock x:Name="output" MinWidth="200" Margin="30" Height="50" TextAlignment="Center"/>
+        </StackPanel>
     </Grid>
 </UserControl>

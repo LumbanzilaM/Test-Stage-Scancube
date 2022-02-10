@@ -55,7 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Test1\Camera.cs" />
     <Compile Include="Test1\HardwareGenerator.cs" />
+    <Compile Include="Test1\Lightbox.cs" />
+    <Compile Include="Test1\Turntable.cs" />
     <Compile Include="Test2\Bundle.cs" />
     <Compile Include="Test2\BundlesManager.cs" />
     <Compile Include="Test3\MyView.xaml.cs">
