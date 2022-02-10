@@ -17,6 +17,10 @@ namespace Test_Stage_Scancube.Test1
             //Lightbox lightbox = Votre méthode 'CreateObject'
             //TurnTable turntable = Votre méthode 'CreateObject'
             //Camera camera = Votre méthode 'CreateObject'
+            Lightbox lightbox = new Lightbox();
+            Turntable turntable = new Turntable();
+            Camera camera = new Camera();
+           
 
             // -----------------------------------------------
 
@@ -24,9 +28,9 @@ namespace Test_Stage_Scancube.Test1
 
             string[] infos = new string[]
             {
-                //lightbox.GetInfo(),
-                //turntable.GetInfo(),
-                //camera.GetInfo()
+                lightbox.GetInfo(),
+                turntable.GetInfo(),
+                camera.GetInfo()
             };
             return infos;
 
