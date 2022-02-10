@@ -10,12 +10,6 @@ namespace Test_Stage_Scancube.Test1
     {
        
 
-        public T CreateObject<T>() where T : new()
-        {
-            return new T();
-        }
-
-
         public string[] GetAllInfos()
         {
             //------------------A modifier--------------------
