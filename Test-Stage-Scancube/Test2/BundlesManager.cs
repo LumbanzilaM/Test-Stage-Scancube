@@ -45,7 +45,7 @@ namespace Test_Stage_Scancube.Test2
         public Bundle CreateBundle(string owner)
         {
             // Votre code ici
-            return null;
+            return new Bundle(owner);
             //
 
         }
@@ -59,7 +59,7 @@ namespace Test_Stage_Scancube.Test2
         public Bundle GetBundleByOwner(string owner)
         {
             // Votre code ici
-            return null;
+            return Bundles.Find(_bundel => _bundel.Owner == owner);
             //
         }
 
@@ -70,8 +70,11 @@ namespace Test_Stage_Scancube.Test2
         public List<string> GetOwners()
         {
             //Votre code ici
+            List<string> owners = new List<String>();
 
-            return new List<string>();
+            foreach (Bundle _bundle in Bundles)
+                owners.Add(_bundle.Owner);
+            return owners;
 
             //
         }
