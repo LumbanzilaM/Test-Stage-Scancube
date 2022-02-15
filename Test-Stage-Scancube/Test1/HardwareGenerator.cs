@@ -8,15 +8,35 @@ namespace Test_Stage_Scancube.Test1
 {
     public class HardwareGenerator
     {
-       
+        public enum Type
+        {
+            Lightbox,
+            TurnTable,
+            Camera
+        };
+
+        public IHardware CreateObject(Type _type)
+        {
+            switch (_type)
+            {
+                case Type.Lightbox:
+                    return new Lightbox();
+                case Type.TurnTable:
+                    return new TurnTable();
+                case Type.Camera:
+                    return new Camera();
+                default:
+                    throw new ArgumentException("Argument not supported");
+            }
+        }
 
         public string[] GetAllInfos()
         {
             //------------------A modifier--------------------
 
-            //Lightbox lightbox = Votre méthode 'CreateObject'
-            //TurnTable turntable = Votre méthode 'CreateObject'
-            //Camera camera = Votre méthode 'CreateObject'
+            IHardware lightbox = (Lightbox)CreateObject(Type.Lightbox);
+            IHardware turntable = (TurnTable)CreateObject(Type.TurnTable);
+            IHardware camera = (Camera)CreateObject(Type.Camera);
 
             // -----------------------------------------------
 
@@ -24,9 +44,9 @@ namespace Test_Stage_Scancube.Test1
 
             string[] infos = new string[]
             {
-                //lightbox.GetInfo(),
-                //turntable.GetInfo(),
-                //camera.GetInfo()
+                lightbox.GetInfo(),
+                turntable.GetInfo(),
+                camera.GetInfo()
             };
             return infos;
 
