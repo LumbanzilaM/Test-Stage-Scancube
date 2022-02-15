@@ -24,5 +24,15 @@ namespace Test_Stage_Scancube.Test3
         {
             InitializeComponent();
         }
+
+        private void button_Click(object _obj, RoutedEventArgs _event)
+        {
+            Button source = _obj as Button;
+
+            if (source != null) {
+                source.Visibility = Visibility.Hidden;
+                this.TextInfo.Visibility = Visibility.Visible;
+            }
+        }
     }
 }
