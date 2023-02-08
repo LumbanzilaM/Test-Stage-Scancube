@@ -23,6 +23,19 @@ namespace Test_Stage_Scancube.Test3
         public MyView()
         {
             InitializeComponent();
+            Button button = new Button();
+            button.Text = "J'ai fini";
+            button.HorizontalAlignment = System.Windows.HorizontalAlignment.Left;
+            button.Margin = new System.Windows.Thickness(150, 150, 0, 0);
+            button.VerticalAlignment = System.Windows.VerticalAlignment.Top;
+            button.Click += new System.EventHandler(Button_Click);
+            this.Content = button;
         }
+
+        private void Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Beaucoup trop facile ce test!");
+        }
+    }
     }
 }

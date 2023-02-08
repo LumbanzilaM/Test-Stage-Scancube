@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,8 +45,10 @@ namespace Test_Stage_Scancube.Test2
         /// <returns></returns>
         public Bundle CreateBundle(string owner)
         {
+            Bundle bundle = new Bundle();
+            bundle.Owner = owner;
             // Votre code ici
-            return null;
+            return bundle;
             //
 
         }
@@ -58,23 +61,30 @@ namespace Test_Stage_Scancube.Test2
         /// <returns></returns>
         public Bundle GetBundleByOwner(string owner)
         {
-            // Votre code ici
-            return null;
-            //
+            for (int i = 0; i < Bundles.Count; i++)
+            {
+                if (Bundles[i].Owner == owner)
+                {
+                    return Bundles[i];
+                }
+            }
+
+            /// <summary>
+            /// Retournes tous les clients connus
+            /// </summary>
+            /// <returns></returns>
+            public List<string> GetOwners()
+            {
+                List<string> clients = new List<string>();
+                foreach (Bundle bundle in Bundles)
+                {
+                    clients.Add(bundle.Owner);
+                }
+
+                return clients;
+
+                //
+            }
+
         }
-
-        /// <summary>
-        /// Retournes tous les clients connus
-        /// </summary>
-        /// <returns></returns>
-        public List<string> GetOwners()
-        {
-            //Votre code ici
-
-            return new List<string>();
-
-            //
-        }
-
     }
-}

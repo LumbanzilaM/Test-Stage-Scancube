@@ -72,11 +72,11 @@ namespace Test_Stage_Scancube
             Bundle bundle = manager.GetBundleByOwner(owner);
             OwnerTxt2.Text = bundle.Owner;
 
-            // ------- A décommenter ------- 
+            /*  ------- A décommenter ------- */
 
-            //LightboxTxt2.Text = bundle.Lightbox.Id.ToString();
-            //TurnTableTxt2.Text = bundle.Turntable.Id.ToString();
-            //Cameratxt2.Text = bundle.Camera.Id.ToString();
+            LightboxTxt2.Text = bundle.Lightbox.Id.ToString();
+            TurnTableTxt2.Text = bundle.Turntable.Id.ToString();
+            Cameratxt2.Text = bundle.Camera.Id.ToString();
 
             // -------------- 
         }
