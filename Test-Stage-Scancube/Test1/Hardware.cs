@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Test_Stage_Scancube.Test1
 {
+    public interface IHardware
+    {
+        string GetInfo();
+    }   
+
     public class Lightbox
     {
+
         public Lightbox() { }
         public string GetInfo()
         {

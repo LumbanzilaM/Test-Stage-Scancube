@@ -60,6 +60,7 @@
     <Compile Include="Test1\HardwareGenerator.cs" />
     <Compile Include="Test2\Bundle.cs" />
     <Compile Include="Test2\BundlesManager.cs" />
+    <Compile Include="Test2\Hardware.cs" />
     <Compile Include="Test3\MyView.xaml.cs">
       <DependentUpon>MyView.xaml</DependentUpon>
     </Compile>

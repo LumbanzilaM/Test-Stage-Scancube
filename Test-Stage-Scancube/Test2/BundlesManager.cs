@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Test_Stage_Scancube.Test1;
+using Test_Stage_Scancube.Test2;
 
 namespace Test_Stage_Scancube.Test2
 {
@@ -16,7 +17,7 @@ namespace Test_Stage_Scancube.Test2
         }
 
 
-        public List<Bundle> Bundles { get; set; }
+        public List<Bundle> Bundles { get; set; } = new List<Bundle>();
 
 
         public void CreateBundles()
@@ -44,8 +45,7 @@ namespace Test_Stage_Scancube.Test2
         /// <returns></returns>
         public Bundle CreateBundle(string owner)
         {
-            // Votre code ici
-            return null;
+            return new Bundle(owner);
             //
 
         }
@@ -58,8 +58,8 @@ namespace Test_Stage_Scancube.Test2
         /// <returns></returns>
         public Bundle GetBundleByOwner(string owner)
         {
-            // Votre code ici
-            return null;
+            
+            return Bundles.Find(x => x.Owner == owner);
             //
         }
 
@@ -69,9 +69,9 @@ namespace Test_Stage_Scancube.Test2
         /// <returns></returns>
         public List<string> GetOwners()
         {
-            //Votre code ici
-
-            return new List<string>();
+            List<string> owners = new List<string>();
+            owners.AddRange(Bundles.Select(x => x.Owner).ToList());
+            return owners;
 
             //
         }

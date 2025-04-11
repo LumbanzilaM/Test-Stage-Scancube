@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Test_Stage_Scancube.Test3
 {
@@ -23,6 +24,11 @@ namespace Test_Stage_Scancube.Test3
         public MyView()
         {
             InitializeComponent();
+        }
+        
+        public void OnClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Beaucoup trop facile ce test!");
         }
     }
 }
