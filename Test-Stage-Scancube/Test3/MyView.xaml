@@ -7,5 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Button  Margin="285,211,285,211" Click="Message">
+            J'ai fini
+        </Button>
+        <TextBlock TextAlignment="Center" FontSize="15" Text="Beaucoup trop facile ce test !" Visibility="Hidden" Margin="262,250,262,174" Foreground="Black" x:Name="myText"/>
     </Grid>
 </UserControl>

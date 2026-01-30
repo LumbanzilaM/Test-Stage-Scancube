@@ -24,5 +24,10 @@ namespace Test_Stage_Scancube.Test3
         {
             InitializeComponent();
         }
+
+        void Message(object sender, RoutedEventArgs e)
+        {
+            myText.Visibility = Visibility.Visible;
+        }
     }
 }

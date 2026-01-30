@@ -7,10 +7,20 @@ Ces classes auront une méthode GetInfo. Cette méthode retournera un string.
 - Camera  retournera "I'm a Camera"
 
 
+/=> Créer les classes
+    Lightbox
+    Turntable
+    Camera
+
+
 Dans la classe HardwareGenerator se trouve la méthode GetAllInfos. C'est cette méthode qui sera appelée pour valider le test.
 GetAllInfos va appeler une ou des méthodes que vous aurez implémenté pour instancier une Lighbox une Turntable et une Camera.
+
 Pour la suite j'appellerai cette ou ces méthode 'CreateObjet', mais vous pouvez les nommer comme vous le souhaitez.
-Ensuite elle va récupérer les infos des ces trois objets garce leur méthode GetInfo réspéctive et les retourner dans un tableau de string.
+
+Ensuite elle va récupérer les infos des ces trois objets grace à leur méthode GetInfo réspéctive et les retourner dans un tableau de string.
+
+    `GetInfo() -> string[]`
 
 Vous ne pouvez pas instancier directement vos objets via un new dans GetAllInfos. Vous devez impérativement passer par 'CreateObject' que vous aurez implémenté.
 Pour tester, dans GetAllInfos il vous faudra modifier la section 'A modifier' et décommenter la séction 'A décommenter'  
