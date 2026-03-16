@@ -24,5 +24,11 @@ namespace Test_Stage_Scancube.Test3
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MyText.Text = "Beaucoup trop facile ce test !";
+            MyText.Visibility = MyText.IsVisible ? Visibility.Hidden : Visibility.Visible;
+        }
     }
 }

@@ -8,14 +8,19 @@ namespace Test_Stage_Scancube.Test1
 {
     public class Camera
     {
-
-        static int id = 0;
+        private static int id;
         public int Id { get; set; }
+        
+
+        public Camera()
+        {
+            Id = GenerateId();
+        }
 
         public int GenerateId()
         {
-            Id++;
-            return Id;
+            id++;
+            return id;
         }
 
         public string GetInfo()

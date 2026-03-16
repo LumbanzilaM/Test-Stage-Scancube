@@ -18,6 +18,5 @@ namespace Test_Stage_Scancube.Test2
         public Camera Camera { get; set; } = new Camera();
         public Lightbox Lightbox { get; set; } = new Lightbox();
         public TurnTable Turntable { get; set; } = new TurnTable();
-
     }
 }

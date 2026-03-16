@@ -13,6 +13,11 @@ namespace Test_Stage_Scancube.Test1
         // l'idee est de creer une static pour que la valeur soit partager mais ca n'a pas l'air de fonctionner
         public Guid Id{ get; set; }
 
+        public TurnTable()
+        {
+            GenerateId();
+        }
+
         public Guid GenerateId()
         {
             Id = System.Guid.NewGuid();
