@@ -8,15 +8,15 @@ namespace Test_Stage_Scancube.Test1
 {
     public class HardwareGenerator
     {
-       
+
 
         public string[] GetAllInfos()
         {
             //------------------A modifier--------------------
 
-            //Lightbox lightbox = Votre méthode 'CreateObject'
-            //TurnTable turntable = Votre méthode 'CreateObject'
-            //Camera camera = Votre méthode 'CreateObject'
+            Lightbox lightbox = CreateObjet<Lightbox>();
+            TurnTable turntable = CreateObjet<TurnTable>();
+            Camera camera = CreateObjet<Camera>();
 
             // -----------------------------------------------
 
@@ -24,13 +24,19 @@ namespace Test_Stage_Scancube.Test1
 
             string[] infos = new string[]
             {
-                //lightbox.GetInfo(),
-                //turntable.GetInfo(),
-                //camera.GetInfo()
+                lightbox.GetInfo(),
+                turntable.GetInfo(),
+                camera.GetInfo()
             };
             return infos;
 
             //---------------------------------------------------
+        }
+
+
+        public T CreateObjet<T>() where T : new()
+        {
+            return new T();
         }
     }
 }
